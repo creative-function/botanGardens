@@ -76,11 +76,14 @@ body {
 	background: #ccc;
 }
 
+.bttnBox {
+	width: 25%;
+}
+
 /* 2. Content ================================= */
 .bgImg {
-	min-height: 75vh;
+	min-height: 100vh;
 	position: relative;
-	background-image: url("../img/botan1.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -89,55 +92,183 @@ body {
 
 .bgImg .caption {
 	width: 100%;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	text-align: center;
-	color: #000;
-}
-
-.bgImg .caption .border {
-	background-color: #111;
-	color: #fff;
-	padding: 6px;
-	font-size: 25px;
-	letter-spacing: 10px;
-}
-
-.bgImg2 {
-	background-image: url("../img/botan2.jpg");
-}
-
-.bgImg3 {
-	background-image: url("../img/botan3.jpg");
-}
-
-.bgImg4 {
-	background-image: url("../img/botan4.jpg");
-}
-
-.textBox {
-	color: #777;
-	background-color: #fff;
-	text-align: center;
-	padding: 20%;
-	text-align: justify;
-	position: relative;
-}
-
-.textBox .miniImg {
-	position: fixed;
-	bottom: 3%;
-	right: 0;
-	width: 50%;
 	display: -webkit-box;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+.bgImg .caption .scroll_IMG {
+	width: 45%;
+}
+
+.bgImg .caption .scroll_IMG img {
+	width: 100%;
+	border-radius: 5%;
+}
+
+.bgImg .caption .img1 {
+	margin: 15%;
+}
+
+.bgImg .caption .img2 {
+	align-self: flex-end;
+	margin: 5%;
+}
+
+.bgImg .caption .img3 {
+	position: relative;
+	left: 10%;
+}
+
+.bgImg .caption .cap-textBox {
+	width: 50%;
+	color: #ffffff;
+	align-self: center;
+	margin: 5%;
+}
+
+.bgImg1 {
+	background-image: url("../img/BG1.daisies.jpg");
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+.bgImg1 .caption {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
 }
 
-.textBox .miniImg img {
-	width: 50%;
+.bgImg1 .caption .hdr_imgs {
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+.bgImg1 .caption .hdr_imgs img {
+	width: 100%;
+}
+
+.bgImg1 .caption .hdr_imgs .bttnBox {
+	width: 25%;
+	align-self: center;
+}
+
+.bgImg1 .caption img.rabbitHole {
+	width: 15%;
+	position: absolute;
+	left: 15%;
+	z-index: 99;
+	bottom: -15%;
+}
+
+.bgImg2 {
+	background-image: url("../img/BG2.leaves.jpg");
+}
+
+.textBox {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	        align-items: center;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/botan1.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+@media (min-width: 900px) {
+	.textBox {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+.textBox img.rabbitHole {
+	width: 20%;
+	position: absolute;
+	right: 15%;
+	z-index: 99;
+	top: -10%;
+}
+
+@media (min-width: 767px) {
+	.textBox img.rabbitHole {
+		width: 15%;
+	}
+}
+
+.textBox .txtBox1a, .textBox .txtBox1b {
+	width: 85%;
+	padding: 3%;
+	margin: 3%;
+	color: #ffffff;
+}
+
+@media (min-width: 767px) {
+	.textBox .txtBox1a, .textBox .txtBox1b {
+		width: 60%;
+	}
+}
+
+.textBox .txtBox1a {
+	font-size: 2em;
+}
+
+.textBox .txtBox1b {
+	font-size: 1.2em;
+}
+
+.textBox .txtBox1b p {
+	padding: 1%;
+}
+
+.bgImg3 {
+	background-image: url("../img/BG3.yellowFlowers.jpg");
+}
+
+.bgImg4 {
+	background-image: url("../img/BG4.purpleFlowers.jpg");
+}
+
+.bgImg5 {
+	background-image: url("../img/BG5.CheshireLeaves.jpg");
+}
+
+.bgImg6 {
+	background-image: url("../img/BG6.weepingGreens.jpg");
+}
+
+.bgImg7 {
+	background-color: #8ca99f;
+}
+
+.bgImg8 {
+	background-image: url("../img/BG8.redFlowers.jpg");
+}
+
+.bgImg9 {
+	background-color: #58a27c;
 }
 
 /*# sourceMappingURL=main.css.map */

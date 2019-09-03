@@ -15,7 +15,8 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
-
+@import 'base/colors';
+@import 'base/media';
 
 /* 1. Main Layout ================================= */
 
@@ -27,74 +28,185 @@ body {
 	background: #ccc;
 }
 
-
-
+.bttnBox{
+	width:25%;
+}
 
 /* 2. Content ================================= */
 
 .bgImg{
-	min-height: 75vh;
+	min-height: 100vh;
 	position: relative;
-	background-image: url("../img/botan1.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;
 
 	.caption{
-		width:100%;
-		position: absolute;
-		top:50%;
-		left:0;
-		text-align: center;
-		color:#000;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
 
-		.border{
-			background-color: #111;
-			color: #fff;
-			padding: 6px;
-			font-size: 25px;
-			letter-spacing: 10px;
+		.scroll_IMG{
+			width:45%;
+			img{
+				width:100%;
+				border-radius: 5%;
+			}
 		}
+
+		.img1{
+			margin:15%;
+		}
+
+		.img2{
+			align-self: flex-end;
+			margin:5%;
+		}
+
+		.img3{
+			position: relative;
+			left:10%;
+			
+		}
+
+		.cap-textBox{
+			width: 50%;
+			color: $botanText;
+			align-self: center;
+			margin:5%;
+		}
+	
 
 	}
 }
 
-.bgImg2{
+.bgImg1{
+	background-image: url("../img/BG1.daisies.jpg");
+	display: flex;
+	align-items: center;
+	.caption{
+		
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		.hdr_imgs{
+			width:100%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			
+			img{
+				width:100%;
+			}
+			.bttnBox{
+				width:25%;
+				align-self: center;
+			}
+		}
+		img.rabbitHole{
+			width:15%;
+			position: absolute;
+			left: 15%;
+			z-index: 99;
+			bottom: -15%;
+		}
+		
+	}
+}
 
-	background-image: url("../img/botan2.jpg");
+
+.bgImg2{
+	background-image: url("../img/BG2.leaves.jpg");
+
+	
+}
+
+.textBox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
+	height:100%;
+	background-image: url("../img/botan1.jpg");
+	background-size:cover;
+	position: relative;
+	@media #{$desktop}{
+		flex-direction: row;
+	}
+
+	img.rabbitHole{
+		width:20%;
+		position: absolute;
+		right: 15%;
+		z-index: 99;
+		top: -10%;
+		@media #{$tablet}{
+			width:15%;
+		}
+	}
+
+	.txtBox1a, .txtBox1b{
+		width:85%;
+		padding:3%;
+		margin:3%;
+		color:$botanText;
+		@media #{$tablet}{
+			width:60%;
+		}
+
+	}
+
+	.txtBox1a{
+		font-size: 2em;
+	}
+
+	.txtBox1b{
+		font-size: 1.2em;
+		p{
+			padding: 1%;
+		}
+	}
+
+	
 }
 
 .bgImg3{
 
-	background-image: url("../img/botan3.jpg");
+	background-image: url("../img/BG3.yellowFlowers.jpg");
 }
 
 .bgImg4{
 
-	background-image: url("../img/botan4.jpg");
+	background-image: url("../img/BG4.purpleFlowers.jpg");
+}
+
+.bgImg5{
+
+	background-image: url("../img/BG5.CheshireLeaves.jpg");
+}
+
+.bgImg6{
+
+	background-image: url("../img/BG6.weepingGreens.jpg");
+}
+
+.bgImg7{
+
+	background-color:$botanMoss;
 }
 
 
-.textBox{
+.bgImg8{
 
-	color: #777;
-	background-color: #fff;
-	text-align: center;
-	padding: 20%;
-	text-align: justify;
-	position: relative;
+	background-image: url("../img/BG8.redFlowers.jpg");
+}
 
-	.miniImg{
-		position: fixed;
-		bottom:3%;
-		right:0;
-		width:50%;
-		display: flex;
-		justify-content: center;
-		img{
-			width:50%;
-		}
-	}
 
+.bgImg9{
+
+	background-color:$botanGreen;
 }

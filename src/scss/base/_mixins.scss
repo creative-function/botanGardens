@@ -1,0 +1,30 @@
+
+@mixin outlineText() {
+    font-family: $paraReg;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+@mixin outlineTextnum() {
+    font-family: $paraReg;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+@mixin mainText() {
+    font-family: parisine-plus-std-gris, sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+@mixin menuText() {
+    font-family: parisine-plus-std-gris, sans-serif;
+    font-weight: 400;
+    color: $strawGold;
+}
+
