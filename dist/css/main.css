@@ -77,7 +77,15 @@ body {
 }
 
 .bttnBox {
-	width: 25%;
+	width: 40%;
+	align-self: center;
+	margin: 15% 0;
+}
+
+@media (min-width: 767px) {
+	.bttnBox {
+		width: 25%;
+	}
 }
 
 /* 2. Content ================================= */
@@ -88,6 +96,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin: 20% auto;
 }
 
 .bgImg .caption {
@@ -130,6 +139,7 @@ body {
 }
 
 .bgImg1 {
+	margin-top: 0;
 	background-image: url("../img/BG1.daisies.jpg");
 	display: -webkit-box;
 	display: flex;
@@ -160,30 +170,112 @@ body {
 	        justify-content: center;
 }
 
+@media (min-width: 900px) {
+	.bgImg1 .caption .hdr_imgs {
+		width: 70%;
+	}
+}
+
 .bgImg1 .caption .hdr_imgs img {
 	width: 100%;
 }
 
+.bgImg1 .caption .hdr_imgs .imaginary {
+	margin: 5%;
+	font-size: 2em;
+	color: white;
+}
+
+.bgImg1 .caption .hdr_imgs .date {
+	align-self: flex-end;
+	margin: 5%;
+	font-size: 1.2em;
+	color: white;
+}
+
 .bgImg1 .caption .hdr_imgs .bttnBox {
-	width: 25%;
+	width: 45%;
 	align-self: center;
 }
 
+@media (min-width: 767px) {
+	.bgImg1 .caption .hdr_imgs .bttnBox {
+		width: 30%;
+	}
+}
+
+@media (min-width: 900px) {
+	.bgImg1 .caption .hdr_imgs .bttnBox {
+		margin: 5%;
+	}
+}
+
 .bgImg1 .caption img.rabbitHole {
-	width: 15%;
+	width: 25%;
 	position: absolute;
-	left: 15%;
+	left: 5%;
 	z-index: 99;
 	bottom: -15%;
+}
+
+@media (min-width: 767px) {
+	.bgImg1 .caption img.rabbitHole {
+		left: 10%;
+	}
+}
+
+@media (min-width: 900px) {
+	.bgImg1 .caption img.rabbitHole {
+		width: 15%;
+		bottom: -30%;
+	}
 }
 
 .bgImg2 {
 	background-image: url("../img/BG2.leaves.jpg");
 }
 
+.bgImg2 .cap2 .img1 {
+	width: 80%;
+}
+
+@media (min-width: 767px) {
+	.bgImg2 .cap2 .img1 {
+		width: 50%;
+		align-self: flex-end;
+		margin: 30% 5%;
+	}
+}
+
+.bgImg2 .cap2 .img2 {
+	width: 90%;
+	margin: 5% auto;
+}
+
+@media (min-width: 767px) {
+	.bgImg2 .cap2 .img2 {
+		width: 60%;
+		align-self: flex-start;
+		margin: 5%;
+	}
+}
+
+.bgImg2 .cap2 .img3 {
+	width: 60%;
+	margin-bottom: 50%;
+}
+
+@media (min-width: 767px) {
+	.bgImg2 .cap2 .img3 {
+		width: 50%;
+		left: 5%;
+	}
+}
+
 .textBox {
 	display: -webkit-box;
 	display: flex;
+	flex-wrap: wrap;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
@@ -191,9 +283,17 @@ body {
 	        align-items: center;
 	width: 100%;
 	height: 100%;
-	background-image: url("../img/botan1.jpg");
+	position: relative;
+	background-image: url("../img/BG.botanCenter.jpg");
 	background-size: cover;
 	position: relative;
+}
+
+@media (min-width: 767px) {
+	.textBox {
+		-webkit-box-align: start;
+		        align-items: flex-start;
+	}
 }
 
 @media (min-width: 900px) {
@@ -201,33 +301,49 @@ body {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
+		-webkit-box-pack: center;
+		        justify-content: center;
 	}
 }
 
-.textBox img.rabbitHole {
-	width: 20%;
+.textBox .scroll_IMG {
+	width: 90%;
+	margin: 0 auto;
+	height: 100px;
+	position: relative;
+	top: -100px;
+}
+
+.textBox .scroll_IMG img {
+	right: 0;
 	position: absolute;
-	right: 15%;
-	z-index: 99;
-	top: -10%;
+	width: 50%;
+	border-radius: 5%;
 }
 
 @media (min-width: 767px) {
-	.textBox img.rabbitHole {
-		width: 15%;
+	.textBox .scroll_IMG img {
+		width: 25%;
 	}
 }
 
-.textBox .txtBox1a, .textBox .txtBox1b {
+.textBox .txtBx {
 	width: 85%;
 	padding: 3%;
-	margin: 3%;
 	color: #ffffff;
 }
 
 @media (min-width: 767px) {
-	.textBox .txtBox1a, .textBox .txtBox1b {
+	.textBox .txtBx {
 		width: 60%;
+	}
+}
+
+@media (min-width: 900px) {
+	.textBox .txtBx {
+		width: 50%;
+		padding: 7%;
+		margin: 5% auto;
 	}
 }
 
@@ -247,24 +363,305 @@ body {
 	background-image: url("../img/BG3.yellowFlowers.jpg");
 }
 
+.bgImg3 .cap3 .img1 {
+	width: 70%;
+}
+
+@media (min-width: 767px) {
+	.bgImg3 .cap3 .img1 {
+		width: 60%;
+	}
+}
+
+@media (min-width: 900px) {
+	.bgImg3 .cap3 .img1 {
+		width: 40%;
+	}
+}
+
+.bgImg3 .cap3 .cap-textBox3 {
+	text-align: right;
+	align-self: flex-end;
+	font-size: 1.5em;
+	line-height: 1.2em;
+}
+
+@media (min-width: 767px) {
+	.bgImg3 .cap3 .cap-textBox3 {
+		font-size: 2em;
+	}
+}
+
+.bgImg3 .cap3 .img2 {
+	width: 90%;
+}
+
+@media (min-width: 900px) {
+	.bgImg3 .cap3 .img2 {
+		width: 50%;
+		align-self: flex-start;
+	}
+}
+
+.bgImg3 .cap3 .img3 {
+	width: 70%;
+	align-self: flex-end;
+	left: 0;
+	margin: 5%;
+	position: relative;
+}
+
+@media (min-width: 767px) {
+	.bgImg3 .cap3 .img3 {
+		width: 45%;
+	}
+}
+
+.bgImg3 .cap3 .img3 .yellow-mushroom {
+	width: 50%;
+	position: absolute;
+	left: -10%;
+	bottom: 0;
+}
+
+.bgImg3 .cap3 .img4 {
+	margin: 15%;
+	width: 35%;
+	align-self: center;
+}
+
+@media (min-width: 767px) {
+	.bgImg3 .cap3 .img4 {
+		margin: 5%;
+		align-self: flex-end;
+	}
+}
+
+@media (min-width: 900px) {
+	.bgImg3 .cap3 .img4 {
+		width: 20%;
+	}
+}
+
 .bgImg4 {
 	background-image: url("../img/BG4.purpleFlowers.jpg");
+}
+
+.bgImg4 .cap4 .cap-textBox {
+	width: 80%;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1.2em;
+}
+
+@media (min-width: 767px) {
+	.bgImg4 .cap4 .cap-textBox {
+		width: 40%;
+	}
+}
+
+@media (min-width: 900px) {
+	.bgImg4 .cap4 .cap-textBox {
+		width: 30%;
+	}
+}
+
+.bgImg4 .cap4 .img1 {
+	width: 70%;
+	margin: 5%;
+}
+
+@media (min-width: 900px) {
+	.bgImg4 .cap4 .img1 {
+		width: 50%;
+		align-self: flex-end;
+	}
+}
+
+.bgImg4 .cap4 .img2 {
+	width: 90%;
+	margin: 15% auto;
+}
+
+@media (min-width: 900px) {
+	.bgImg4 .cap4 .img2 {
+		width: 60%;
+	}
+}
+
+@media (min-width: 767px) {
+	.bgImg4 .cap4 .img2 .chess-set {
+		display: none;
+	}
+}
+
+.bgImg4 .cap4 .img4 {
+	width: 35%;
+	margin: 10%;
+	align-self: flex-end;
+}
+
+@media (min-width: 900px) {
+	.bgImg4 .cap4 .img4 {
+		align-self: flex-start;
+		width: 20%;
+	}
 }
 
 .bgImg5 {
 	background-image: url("../img/BG5.CheshireLeaves.jpg");
 }
 
+.bgImg5 .cap5 {
+	height: 100vh;
+	position: relative;
+}
+
+.bgImg5 .cap5 .img1 {
+	display: none;
+	width: 70%;
+	top: -20%;
+	right: 0;
+	margin: 5%;
+	align-self: flex-end;
+	position: relative;
+}
+
+@media (min-width: 767px) {
+	.bgImg5 .cap5 .img1 {
+		display: block;
+	}
+}
+
+.bgImg5 .cap5 .img2 {
+	width: 80%;
+	position: absolute;
+	top: 30%;
+	align-self: center;
+}
+
+@media (min-width: 767px) {
+	.bgImg5 .cap5 .img2 {
+		top: 70%;
+	}
+}
+
+.bgImg5 .clear-box {
+	display: none;
+}
+
+@media (min-width: 767px) {
+	.bgImg5 .clear-box {
+		display: block;
+		visibility: hidden;
+		height: 300px;
+		width: 100px;
+	}
+}
+
 .bgImg6 {
 	background-image: url("../img/BG6.weepingGreens.jpg");
+}
+
+.bgImg6 .cap6 .img1 {
+	width: 70%;
+	align-self: flex-end;
+	margin: 5%;
+	position: relative;
+	top: -150px;
+}
+
+@media (min-width: 767px) {
+	.bgImg6 .cap6 .img1 {
+		width: 50%;
+	}
+}
+
+.bgImg6 .cap6 .img2 {
+	width: 90%;
+	margin: 10% auto;
+}
+
+@media (min-width: 900px) {
+	.bgImg6 .cap6 .img2 {
+		display: none;
+	}
 }
 
 .bgImg7 {
 	background-color: #8ca99f;
 }
 
+.bgImg7 .cap7 .img1 {
+	width: 60%;
+	position: relative;
+	margin: 0 10% -20% 15%;
+	top: -300px;
+	display: none;
+}
+
+@media (min-width: 900px) {
+	.bgImg7 .cap7 .img1 {
+		display: block;
+	}
+}
+
+.bgImg7 .cap7 .cap-textBox {
+	width: 80%;
+}
+
+@media (min-width: 767px) {
+	.bgImg7 .cap7 .cap-textBox {
+		width: 35%;
+	}
+}
+
+.bgImg7 .cap7 .cap-textBox h2 {
+	padding: 2%;
+	font-size: 1.7em;
+}
+
+.bgImg7 .cap7 .cap-textBox p {
+	padding: 2%;
+	line-height: 1.2rem;
+}
+
 .bgImg8 {
 	background-image: url("../img/BG8.redFlowers.jpg");
+}
+
+.bgImg8 .cap8 .scroll_IMG {
+	width: 85%;
+}
+
+@media (min-width: 900px) {
+	.bgImg8 .cap8 .scroll_IMG {
+		width: 50%;
+	}
+}
+
+.bgImg8 .cap8 .img1 {
+	margin: 15% auto;
+}
+
+@media (min-width: 900px) {
+	.bgImg8 .cap8 .img1 .img1-8d {
+		position: relative;
+		left: 250px;
+	}
+}
+
+.bgImg8 .cap8 .img2 {
+	margin: 5%;
+	width: 70%;
+	align-self: flex-start;
+}
+
+@media (min-width: 900px) {
+	.bgImg8 .cap8 .img2 {
+		width: 50%;
+		align-self: flex-end;
+	}
 }
 
 .bgImg9 {
