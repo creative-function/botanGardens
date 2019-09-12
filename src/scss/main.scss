@@ -372,9 +372,7 @@ section.transition{
 			left:0;
 			margin:5%;
 			position: relative;
-			@media#{$tablet}{
-				width: 45%;
-			}
+		
 
 			.yellow-mushroom{
 				width:50%;
@@ -476,13 +474,13 @@ section.transition{
 		}
 	
 		.img2{
-			width:80%;
+			width:100%;
 			max-width: 500px;
 			position: absolute;
-			top:30%;
+			top:50%;
 			align-self: center;
 			@media#{$tablet}{
-				top:95%;
+				top:120%;
 				right:45%;
 
 			}

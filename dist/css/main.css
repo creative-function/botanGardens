@@ -482,12 +482,6 @@ section.transition {
 	position: relative;
 }
 
-@media (min-width: 767px) {
-	.bgImg3 .cap3 .img3 {
-		width: 45%;
-	}
-}
-
 .bgImg3 .cap3 .img3 .yellow-mushroom {
 	width: 50%;
 	position: absolute;
@@ -605,16 +599,16 @@ section.transition {
 }
 
 .bgImg5 .cap5 .img2 {
-	width: 80%;
+	width: 100%;
 	max-width: 500px;
 	position: absolute;
-	top: 30%;
+	top: 50%;
 	align-self: center;
 }
 
 @media (min-width: 767px) {
 	.bgImg5 .cap5 .img2 {
-		top: 95%;
+		top: 120%;
 		right: 45%;
 	}
 }
