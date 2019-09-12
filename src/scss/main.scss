@@ -16,6 +16,8 @@ TABLE OF CONTENTS:
  $tran :  rgba(99, 95, 157, 0.5);
  $fade : fadeIn 5s ease-in-out infinite;
 
+ $tran1_green: #85A055;
+
 /* 0. Reset ================================= */
 @import 'reset';
 @import 'base/colors';
@@ -285,13 +287,14 @@ section.transition{
 		position: relative;
 		top:-100px;	
 		img{
+			top:-100%;
 			right:0;
 			position: absolute;
 			width:50%;
 			border-radius: 5%;
 
 			@media#{$tablet}{
-				width: 25%;
+				width: 40%;
 			}
 		}
 	}
@@ -489,6 +492,10 @@ section.transition{
 	.clear-box{
 		visibility: hidden;
 		height: 450px;
+		@media#{$desktop}{
+			height: 850px;
+
+		}
 		
 	}
 
@@ -556,7 +563,7 @@ section.transition{
 
 	}
 
-	background-color:$botanMoss;
+	//background-color:$botanMoss;
 }
 
 .bgImg8{

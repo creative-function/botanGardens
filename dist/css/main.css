@@ -385,6 +385,7 @@ section.transition {
 }
 
 .textBox .scroll_IMG img {
+	top: -100%;
 	right: 0;
 	position: absolute;
 	width: 50%;
@@ -393,7 +394,7 @@ section.transition {
 
 @media (min-width: 767px) {
 	.textBox .scroll_IMG img {
-		width: 25%;
+		width: 40%;
 	}
 }
 
@@ -623,6 +624,12 @@ section.transition {
 	height: 450px;
 }
 
+@media (min-width: 900px) {
+	.bgImg5 .clear-box {
+		height: 850px;
+	}
+}
+
 .bgImg6 {
 	background-image: url("../img/BG6.weepingGreens.jpg");
 }
@@ -650,10 +657,6 @@ section.transition {
 	.bgImg6 .cap6 .img2 {
 		display: none;
 	}
-}
-
-.bgImg7 {
-	background-color: #8ca99f;
 }
 
 .bgImg7 .cap7 .img1 {
