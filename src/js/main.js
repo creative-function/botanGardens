@@ -29,15 +29,14 @@ function colorDown(element){
     }else if(element.id == "wp1"){
 
         let tl2 = new TimelineMax();
-        tl2.from(transDiv, .5, {backgroundColor:"none"})
-        .to(transDiv,1.5,{backgroundColor:"#85A055"}); 
+        tl2.to(transDiv,2,{backgroundColor:"#85A055"}); 
         //green
 
     }else if(element.id == "wp2"){
 
         console.log("point ready " + element.id)
         var tl = new TimelineMax();
-        tl.to(transDiv, 3, {backgroundColor:"none"})
+        tl.to(transDiv, 4, {backgroundColor:"none"})
 
     }else if(element.id == "wp3"){
 
@@ -45,6 +44,11 @@ function colorDown(element){
         var tl = new TimelineMax();
         tl.to(transDiv, 2, {backgroundColor:"#C4BBDD"})
         //light purple
+
+    } else if(element.id == "wp4a"){
+        console.log("point ready " + element.id)
+        var tl = new TimelineMax();
+        tl.to(transDiv, 1, {backgroundColor:"none"})
 
     }else if(element.id == "wp4"){
         console.log("point ready " + element.id)
@@ -143,11 +147,18 @@ function colorUp(element){
         tl.to(transDiv, 3, {backgroundColor:"none"})
         
 
+    } else if(element.id == "wp4a"){
+        console.log("point ready " + element.id)
+        var tl = new TimelineMax();
+        tl.to(transDiv, 2, {backgroundColor:"#C4BBDD"})
+          //light purple
+
     }else if(element.id == "wp4"){
         console.log("point ready " + element.id)
         var tl = new TimelineMax();
-        tl.to(transDiv, 4, {backgroundColor:"#C4BBDD",delay:2})
-        //light purple
+        tl.to(transDiv, 4, {backgroundColor:"none"})
+      
+
     }else if(element.id == "wp5"){
 
         console.log("point ready " + element.id)
@@ -280,7 +291,20 @@ let waypoint4 = new Waypoint({
             console.log("downer") 
             colorDown(wp4);
         }
-    }, offset: "-75%"
+    }, 
+})
+
+let waypoint4a = new Waypoint({
+    element: wp4a,
+    handler: function handler(direction){
+        if (direction) {
+            console.log(this.element) 
+            colorUp(wp4a);
+        } else {
+            console.log("downer") 
+            colorDown(wp4a);
+        }
+    }, 
 })
 
 let waypoint5 = new Waypoint({

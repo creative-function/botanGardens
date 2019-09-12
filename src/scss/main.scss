@@ -201,16 +201,17 @@ section.transition{
 			}
 		}
 		img.rabbitHole{
-			width:25%;
+			width:30%;
 			position: absolute;
 			left: 5%;
 			z-index: 99;
-			bottom: -15%;
+			bottom: -6%;
 			@media#{$tablet}{
-				left:10%;
+				left:5%;
 			}
 			@media#{$desktop}{
-				width:15%;
+				left:10%;
+				width:25%;
 				bottom:-30%;
 				
 			}
@@ -377,8 +378,8 @@ section.transition{
 			.yellow-mushroom{
 				width:50%;
 				position: absolute;
-				left:-10%;
-				bottom:0;
+				left:-20%;
+				bottom:-10%;
 			}
 		}
 
@@ -544,6 +545,7 @@ section.transition{
 		}
 
 		.cap-textBox{
+			position: relative;
 			width:80%;
 			@media#{$tablet}{
 				width:35%;
@@ -556,6 +558,13 @@ section.transition{
 			p{
 				padding:2%;
 				line-height: 1.2rem;
+			}
+
+			img{
+				position: absolute;
+				top:-100%;
+				right:-25%;
+				width:40%;
 			}
 		}
 
@@ -608,6 +617,28 @@ section.transition{
 .bgImg9{
 
 	background-color:$botanGreen;
+
+	.cap9{
+
+		.cap-textBox9{
+			position: relative;
+			width:80%;
+			@media#{$tablet}{
+				width:35%;
+			}	
+			h2{
+				padding:2%;
+				font-size: 2.5em;
+				text-align: center;
+			}
+	
+			p{
+				padding:2%;
+				line-height: 1.2rem;
+			}
+		}
+	}
+
 }
 
 
