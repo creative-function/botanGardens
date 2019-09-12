@@ -88,6 +88,11 @@ body {
 	}
 }
 
+.bttnBox:hover {
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
 section.transition {
 	z-index: 50;
 	background-color: none;
@@ -757,6 +762,10 @@ section.transition {
 .bgImg9 .cap9 .cap-textBox9 p {
 	padding: 2%;
 	line-height: 1.2rem;
+}
+
+.bgImg9 .cap9 .img1 {
+	margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
