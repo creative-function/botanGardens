@@ -148,10 +148,19 @@ section.transition{
 	z-index: 99;
 	//visibility: hidden;
 
+	.scroll_IMG{
+		width:15%;
+		margin:0 auto;
 
+		img{
+			width:65%;
+		}
+	}
 	.bgImg{
 		background: none;
 	}
+
+
 
 }
 
@@ -642,8 +651,18 @@ section.transition{
 			}
 		}
 
-		.img1{
-			margin: 0 auto;
+		.scroll_IMG{
+			margin: 5% auto;
+		}
+
+		.img2{
+			width:35%;
+		}
+
+		.img3{
+			width:13%;
+			position: relative;
+			left:0;
 		}
 	}
 

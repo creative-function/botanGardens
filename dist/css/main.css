@@ -208,6 +208,15 @@ section.transition {
 	z-index: 99;
 }
 
+.wrap_front .scroll_IMG {
+	width: 15%;
+	margin: 0 auto;
+}
+
+.wrap_front .scroll_IMG img {
+	width: 65%;
+}
+
 .wrap_front .bgImg {
 	background: none;
 }
@@ -764,8 +773,18 @@ section.transition {
 	line-height: 1.2rem;
 }
 
-.bgImg9 .cap9 .img1 {
-	margin: 0 auto;
+.bgImg9 .cap9 .scroll_IMG {
+	margin: 5% auto;
+}
+
+.bgImg9 .cap9 .img2 {
+	width: 35%;
+}
+
+.bgImg9 .cap9 .img3 {
+	width: 13%;
+	position: relative;
+	left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
