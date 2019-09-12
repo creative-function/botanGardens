@@ -73,7 +73,7 @@ table {
 }
 
 body {
-	background: #635f9d;
+	position: relative;
 }
 
 .bttnBox {
@@ -89,39 +89,15 @@ body {
 }
 
 section.transition {
-	margin: 0;
-	min-height: 50vh;
-	width: 100%;
+	z-index: 50;
+	background-color: none;
+	width: 100vw;
+	height: 100vh;
 	position: fixed;
-	bottom: 0;
-	z-index: 95;
-	background-image: url("/dist/img/BG2.leaves.jpg");
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
-	-webkit-animation: fadeIn 4s ease-in-out infinite;
-	        animation: fadeIn 4s ease-in-out infinite;
-}
-
-section.transition .tran {
-	display: none;
-	width: 100%;
-	height: 40vh;
-	position: fixed;
-	background-color: rgba(99, 95, 157, 0.5);
-}
-
-section.transition .tran2 {
-	position: fixed;
-	bottom: 200px;
-}
-
-section.transition2 {
-	background-image: url("/dist/img/BG2.leaves.jpg");
+	top: 0;
+	left: 0;
+	-webkit-animation: none;
+	        animation: none;
 }
 
 .bgImg {
@@ -132,7 +108,7 @@ section.transition2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 20% auto;
+	margin: 0% auto;
 }
 
 .bgImg .caption {
@@ -179,13 +155,17 @@ section.transition2 {
 		display: none;
 		opacity: 0;
 	}
-	50% {
+	25% {
 		display: block;
 		opacity: .6;
 	}
+	25% {
+		display: block;
+		opacity: 1;
+	}
 	100% {
 		display: blok;
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
@@ -194,17 +174,39 @@ section.transition2 {
 		display: none;
 		opacity: 0;
 	}
-	50% {
+	25% {
 		display: block;
 		opacity: .6;
 	}
+	25% {
+		display: block;
+		opacity: 1;
+	}
 	100% {
 		display: blok;
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
 /* 2. Content ================================= */
+.wrap_back {
+	position: absolute;
+	z-index: 1;
+}
+
+.wrap_back *.caption {
+	visibility: hidden;
+}
+
+.wrap_front {
+	position: relative;
+	z-index: 99;
+}
+
+.wrap_front .bgImg {
+	background: none;
+}
+
 .bgImg1 {
 	margin-top: 0;
 	background-image: url("../img/BG1.daisies.jpg");
@@ -300,9 +302,6 @@ section.transition2 {
 
 .bgImg2 {
 	background-image: url("../img/BG2.leaves.jpg");
-	background-image: none;
-	-webkit-animation-delay: 2s;
-	        animation-delay: 2s;
 }
 
 .bgImg2 .cap2 .img1 {
@@ -614,12 +613,14 @@ section.transition2 {
 
 @media (min-width: 767px) {
 	.bgImg5 .cap5 .img2 {
-		top: 70%;
+		top: 95%;
+		right: 45%;
 	}
 }
 
 .bgImg5 .clear-box {
-	display: none;
+	visibility: hidden;
+	height: 450px;
 }
 
 .bgImg6 {
@@ -656,10 +657,9 @@ section.transition2 {
 }
 
 .bgImg7 .cap7 .img1 {
-	width: 60%;
 	position: relative;
-	margin: 0 10% -20% 15%;
-	top: -300px;
+	margin: 0 10% -10% 15%;
+	top: -150px;
 	display: none;
 }
 

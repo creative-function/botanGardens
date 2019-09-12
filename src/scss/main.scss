@@ -14,7 +14,7 @@ TABLE OF CONTENTS:
 */
  $body : #ccc;
  $tran :  rgba(99, 95, 157, 0.5);
- $fade : fadeIn 4s ease-in-out infinite;
+ $fade : fadeIn 5s ease-in-out infinite;
 
 /* 0. Reset ================================= */
 @import 'reset';
@@ -28,8 +28,9 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: rgb(99, 95, 157,);
-	// background: $tran;
+	position: relative;
+	//background: $tran;
+
 }
 
 .bttnBox{
@@ -42,42 +43,17 @@ body {
 }
 
 section.transition{
-	//clear bgImg
-	margin:0;
-	min-height: 50vh;
-	width: 100%;
+	z-index: 50;
+	background-color:none;
+	width:100vw;
+	height: 100vh;
 	position: fixed;
-	bottom:0;
-	z-index: 95;
-	background-image: url("/dist/img/BG2.leaves.jpg");
-	
-	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-	animation: $fade;
-	
-
-
-	.tran{
-		display: none;
-		width:100%;
-		height: 40vh;
-		//border: 10px solid $body;
-		position: fixed;
-		background-color: $tran;
-		
-	}
-	
-	.tran2{
-		position: fixed;
-		bottom:200px;
-	}
+	top:0;
+	left:0;
+	animation: none;
 	
 }
 
-section.transition2{
-	background-image: url("/dist/img/BG2.leaves.jpg");
-}
 
 .bgImg{
 	min-height: 100vh;
@@ -87,7 +63,7 @@ section.transition2{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	margin: 20% auto;
+	margin: 0% auto;
 	//border-radius: 25px;
 	.caption{
 		width: 100%;
@@ -135,18 +111,43 @@ section.transition2{
 		display: none;
 		opacity: 0;
 	}
-	50%{
+	25%{
 		display: block;
 		opacity: .6;
 	}
+	25%{
+		display: block;
+		opacity: 1;
+	}
 	100%{
 		display: blok;
-		opacity: 1;
+		opacity: 0;
 	}
 	
 }
 /* 2. Content ================================= */
+.wrap_back{
+	position: absolute;
+	z-index: 1;
+	//visibility: hidden;
 
+	*.caption{
+		visibility: hidden;
+	}
+}
+
+.wrap_front{
+	//opacity: .5;
+	position: relative;
+	z-index: 99;
+	//visibility: hidden;
+
+
+	.bgImg{
+		background: none;
+	}
+
+}
 
 .bgImg1{
 	margin-top:0;
@@ -219,8 +220,8 @@ section.transition2{
 .bgImg2{
 	//animation: $fade;
 	 background-image: url("../img/BG2.leaves.jpg");
-	background-image: none;
-	animation-delay: 2s;
+	//background-image: none;
+	//animation-delay: 2s;
 	.cap2{
 		
 		.img1{
@@ -478,15 +479,16 @@ section.transition2{
 			top:30%;
 			align-self: center;
 			@media#{$tablet}{
-				top:70%;
+				top:95%;
+				right:45%;
 
 			}
 			
 		}	
 	}
 	.clear-box{
-		display: none;
-
+		visibility: hidden;
+		height: 450px;
 		
 	}
 
@@ -527,10 +529,9 @@ section.transition2{
 	.cap7{
 
 		.img1{
-			width:60%;
 			position: relative;
-			margin: 0 10% -20% 15%;
-			top:-300px;
+			margin: 0 10% -10% 15%;
+			top:-150px;
 			display: none;
 			@media#{$desktop}{
 				display: block;
@@ -603,3 +604,5 @@ section.transition2{
 
 	background-color:$botanGreen;
 }
+
+
