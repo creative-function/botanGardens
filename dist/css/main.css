@@ -795,7 +795,10 @@ section.transition {
 }
 
 .bgImg9 .cap9 .img1 {
-	width: 25%;
+	width: 20%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
 
 .bgImg9 .cap9 .img2 {
