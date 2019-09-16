@@ -16,7 +16,7 @@ TABLE OF CONTENTS:
  $tran :  rgba(99, 95, 157, 0.5);
  $fade : fadeIn 5s ease-in-out infinite;
 
- $tran1_green: #85A055;
+ $tran1_green: rgb(223, 223, 138);
 
 /* 0. Reset ================================= */
 @import 'reset';
@@ -46,6 +46,31 @@ body {
 
 .bttnBox:hover{
 	cursor: grab;
+}
+
+.clear-box{
+	visibility: hidden;
+	height: 450px;
+
+	@media#{$tablet}{
+		height: 100px;
+
+	}
+		
+
+	@media#{$desktop}{
+		height: 1000px;
+
+	}
+		
+}
+
+.bx2{
+	display: none;
+	@media#{$desktop}{
+		display: block;
+		height: 350px;
+	}
 }
 
 section.transition{
@@ -224,7 +249,7 @@ section.transition{
 			}
 			@media#{$desktop}{
 				left:10%;
-				width:25%;
+				width:20%;
 				bottom:-30%;
 				
 			}
@@ -489,26 +514,17 @@ section.transition{
 	
 		.img2{
 			width:100%;
-			max-width: 500px;
-			position: absolute;
-			top:50%;
-			align-self: center;
+			position: sticky;
+  			top: 20%;
+			margin-top:50%;
+
 			@media#{$tablet}{
-				top:120%;
-				right:45%;
-
+				margin-top:0%;
+				align-self: flex-start;
+				top:0;
+				width:50%;
 			}
-			
 		}	
-	}
-	.clear-box{
-		visibility: hidden;
-		height: 450px;
-		@media#{$desktop}{
-			height: 850px;
-
-		}
-		
 	}
 
 
@@ -524,7 +540,7 @@ section.transition{
 			align-self: flex-end;
 			margin:5%;
 			position: relative;
-			top: -150px;
+			top: -300px;
 
 			@media#{$tablet}{
 				width:50%;
@@ -562,6 +578,7 @@ section.transition{
 			width:80%;
 			@media#{$tablet}{
 				width:35%;
+				
 			}	
 			h2{
 				padding:2%;
@@ -571,6 +588,8 @@ section.transition{
 			p{
 				padding:2%;
 				line-height: 1.2rem;
+				width:100%;
+				max-width:75%;
 			}
 
 			img{
@@ -629,7 +648,7 @@ section.transition{
 
 .bgImg9{
 
-	background-color:$botanGreen;
+	background-color:#58a27c;
 
 	.cap9{
 
@@ -651,19 +670,23 @@ section.transition{
 			}
 		}
 
-		.scroll_IMG{
-			margin: 5% auto;
+		// .scroll_IMG{
+		// 	//margin: 5% auto;
+		// }
+
+		.img1{
+			width:20%;
+			position: sticky;
+			top:0;	
 		}
 
 		.img2{
-			width:35%;
+			width:20%;
+			margin: 5% auto;
+
 		}
 
-		.img3{
-			width:13%;
-			position: relative;
-			left:0;
-		}
+	
 	}
 
 }

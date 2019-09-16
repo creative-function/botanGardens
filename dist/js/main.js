@@ -18,99 +18,118 @@ var transDiv = document.querySelector(".transition");
 
 function colorDown(element) {
   if (element.id == "w0") {
-    console.log("point ready " + element.id);
+    console.log("w0:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp1") {
+    console.log("w1:green" + element.id);
+    var rabbitHole = document.querySelector(".rabbitHole");
     var tl2 = new TimelineMax();
     tl2.to(transDiv, 2, {
       backgroundColor: "#85A055"
+    }).to(rabbitHole, 1, {
+      rotation: 25,
+      ease: Power2.easeOut
+    }).to(rabbitHole, 1, {
+      rotation: -25,
+      ease: Power2.easeInOut
     }); //green
   } else if (element.id == "wp2") {
-    console.log("point ready " + element.id);
+    console.log("w2:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 4, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp3") {
-    console.log("trans ready: " + element.id);
+    console.log("w3:light purple" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
       backgroundColor: "#C4BBDD"
     }); //light purple
   } else if (element.id == "wp4a") {
-    console.log("point ready " + element.id);
+    console.log("w4a:transparent" + element.id);
     var tl = new TimelineMax();
-    tl.to(transDiv, 1, {
+    tl.to(transDiv, .5, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp4") {
-    console.log("point ready " + element.id);
+    console.log("w4:yellow" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
-      backgroundColor: "yellow"
+      backgroundColor: "#eded98"
     });
   } else if (element.id == "wp5") {
-    console.log("point ready " + element.id);
+    console.log("w5:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp6") {
-    console.log("point ready " + element.id);
+    console.log("w6:baby blue" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
       backgroundColor: "#C2D0EB"
     }); // baby blue
   } else if (element.id == "wp7") {
-    console.log("point ready " + element.id);
+    console.log("w7:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp8") {
-    console.log("point ready " + element.id);
+    console.log("w8:purple" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
-      backgroundColor: "purple"
+      backgroundColor: "#755f88"
     });
   } else if (element.id == "wp9") {
-    console.log("point ready " + element.id);
+    console.log("w9:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp10") {
-    console.log("point ready " + element.id);
+    console.log("w10:pink" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
       backgroundColor: "#C4888E"
     }); //salmon pink
   } else if (element.id == "wp11") {
-    console.log("point ready " + element.id);
+    console.log("w11:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp12") {
-    console.log("point ready " + element.id);
+    console.log("w12:yellow" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
       backgroundColor: "#8ca99f"
-    }); //moss green
+    }); //yellow 
   } else if (element.id == "wp13") {
-    console.log("point ready " + element.id);
+    console.log("w13:transparent" + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 4, {
       backgroundColor: "none"
     });
   } else if (element.id == "wp14") {
-    console.log("point ready " + element.id);
+    console.log("w14:footer green" + element.id);
+    var footerIMG = document.querySelector(".footIMG");
     var tl = new TimelineMax();
-    tl.to(transDiv, 2, {
+    tl.to(footerIMG, 0, {
+      opacity: 0
+    }).to(transDiv, 2, {
       backgroundColor: "#58a27c"
+    }).to(footerIMG, .5, {
+      opacity: 1
+    }).to(footerIMG, 2.5, {
+      rotation: 180,
+      ease: Power2.easeInOut
+    }).to(footerIMG, 5, {
+      rotation: -180,
+      ease: Power2.easeInOut
     }); //footer green
   }
 }
@@ -142,7 +161,7 @@ function colorUp(element) {
     console.log("point ready " + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 2, {
-      backgroundColor: "#C4BBDD"
+      backgroundColor: "#755f88"
     }); //light purple
   } else if (element.id == "wp4") {
     console.log("point ready " + element.id);
@@ -154,7 +173,7 @@ function colorUp(element) {
     console.log("point ready " + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 3, {
-      backgroundColor: "yellow"
+      backgroundColor: "#eded98"
     });
   } else if (element.id == "wp6") {
     console.log("point ready " + element.id);
@@ -178,7 +197,7 @@ function colorUp(element) {
     console.log("point ready " + element.id);
     var tl = new TimelineMax();
     tl.to(transDiv, 4, {
-      backgroundColor: "purple"
+      backgroundColor: "#755f88"
     });
   } else if (element.id == "wp10") {
     console.log("point ready " + element.id);
@@ -277,7 +296,7 @@ var waypoint4 = new Waypoint({
 var waypoint4a = new Waypoint({
   element: wp4a,
   handler: function handler(direction) {
-    if (direction) {
+    if (direction == "up") {
       console.log(this.element);
       colorUp(wp4a);
     } else {
@@ -407,5 +426,5 @@ var waypoint14 = new Waypoint({
       colorDown(wp14);
     }
   }
-});
+}); ///animations
 //# sourceMappingURL=main.js.map

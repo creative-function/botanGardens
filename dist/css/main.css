@@ -93,6 +93,34 @@ body {
 	cursor: grab;
 }
 
+.clear-box {
+	visibility: hidden;
+	height: 450px;
+}
+
+@media (min-width: 767px) {
+	.clear-box {
+		height: 100px;
+	}
+}
+
+@media (min-width: 900px) {
+	.clear-box {
+		height: 1000px;
+	}
+}
+
+.bx2 {
+	display: none;
+}
+
+@media (min-width: 900px) {
+	.bx2 {
+		display: block;
+		height: 350px;
+	}
+}
+
 section.transition {
 	z-index: 50;
 	background-color: none;
@@ -310,7 +338,7 @@ section.transition {
 @media (min-width: 900px) {
 	.bgImg1 .caption img.rabbitHole {
 		left: 10%;
-		width: 25%;
+		width: 20%;
 		bottom: -30%;
 	}
 }
@@ -615,27 +643,18 @@ section.transition {
 
 .bgImg5 .cap5 .img2 {
 	width: 100%;
-	max-width: 500px;
-	position: absolute;
-	top: 50%;
-	align-self: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20%;
+	margin-top: 50%;
 }
 
 @media (min-width: 767px) {
 	.bgImg5 .cap5 .img2 {
-		top: 120%;
-		right: 45%;
-	}
-}
-
-.bgImg5 .clear-box {
-	visibility: hidden;
-	height: 450px;
-}
-
-@media (min-width: 900px) {
-	.bgImg5 .clear-box {
-		height: 850px;
+		margin-top: 0%;
+		align-self: flex-start;
+		top: 0;
+		width: 50%;
 	}
 }
 
@@ -648,7 +667,7 @@ section.transition {
 	align-self: flex-end;
 	margin: 5%;
 	position: relative;
-	top: -150px;
+	top: -300px;
 }
 
 @media (min-width: 767px) {
@@ -700,6 +719,8 @@ section.transition {
 .bgImg7 .cap7 .cap-textBox p {
 	padding: 2%;
 	line-height: 1.2rem;
+	width: 100%;
+	max-width: 75%;
 }
 
 .bgImg7 .cap7 .cap-textBox img {
@@ -773,18 +794,13 @@ section.transition {
 	line-height: 1.2rem;
 }
 
-.bgImg9 .cap9 .scroll_IMG {
-	margin: 5% auto;
+.bgImg9 .cap9 .img1 {
+	width: 25%;
 }
 
 .bgImg9 .cap9 .img2 {
-	width: 35%;
-}
-
-.bgImg9 .cap9 .img3 {
-	width: 13%;
-	position: relative;
-	left: 0;
+	width: 20%;
+	margin: 5% auto;
 }
 
 /*# sourceMappingURL=main.css.map */
